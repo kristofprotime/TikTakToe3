@@ -1,9 +1,19 @@
 namespace TikTakToe;
 
-public class UnitTest1
+public class TicTacToeTests
 {
     [Fact]
-    public void Test1()
+    public void StartGame_NoWinner()
     {
+        var game = new TicTacToe();
+        Assert.False(game.HasWinner());
+    }
+}
+
+public class TicTacToe
+{
+    public bool HasWinner()
+    {
+        return false;
     }
 }
